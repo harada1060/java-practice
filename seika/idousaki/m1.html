@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form>
+<div class="pulldownset">
+<select id="cate" class="subbox" >
+<option value="">解答を選択</option>
+<option value="ha">a</option>
+<option value="ne">b</option>
+<option value="ne">c</option>
+</select>
+
+<select id="ha" class="subbox2">
+<option value="">正誤を確認</option>
+<option value="ha1">正解</option>
+</select>
+
+<select id="ne" class="subbox2">
+<option value="">正誤を確認</option>
+<option value="ha2">不正解</option>
+</select>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</div>
+
+
+</form>
+
+
+<!--<div id="ha1">キャベツを選択しました</div>　
+<div id="ha2">ほうれん草を選択しました</div>　
+<div id="ha3">レタスを選択しました</div>　
+<div id="ne1">大根を選択しました</div>　
+<div id="ne2">ニンジンを選択しました</div>　
+<div id="ne3">ゴボウを選択しました</div>　
+<div id="ka1">キュウリを選択しました</div>　
+<div id="ka2">カボチャを選択しました</div>　
+<div id="ka3">トマトを選択しました</div>-->
+
+<script type="text/javascript">
+	// DOMContentLoaded内
+
+  // 2. 表示/非表示を一気に更新する（表示条件は、引数と一致する id のサブBOX）
+  var dispSubBox = function(subId) {
+    [...document.querySelectorAll(".subbox2")].forEach(function(elm){
+      elm.style.display = elm.id===subId ? "inline": "none"
+    });
+  }
+  dispSubBox(); // 一致する id がないので全て 非表示になる。
+
+  // 1. select.subbox の操作で値が変わると発火するイベント
+//document.getElementById("cate").addEventListener("cange", function(event){
+  document.getElementById("cate").addEventListener("change", function(event){
+    var elm = event.target; // select#id になる。
+    //console.log( elm.id ); // "cate"
+    //console.log( elm.value ); // サブBOXに与えた id と同じ
+    dispSubBox( elm.value ); // 全更新：一致idだけ表示
+  });
+
+</script>
+
+
+</body>
+</html>

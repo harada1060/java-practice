@@ -1,0 +1,149 @@
+@charset "UTF-8";
+.wrap {
+  animation: fadein 3s forwards;
+}
+.top_wrap{
+	padding-top: 2%;
+}
+@keyframes fadein {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+
+@import url(https://fonts.googleapis.com/css?family=Arvo:700);
+@import url(https://fonts.googleapis.com/css?family=Seaweed+Script);
+.plate {
+  width: 410px;
+  margin: 5% auto;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  background-color: black;
+}
+.shadow {
+  color: #fff;
+  font-family: Arvo;
+  font-weight: bold;
+  text-shadow:
+    -3px -3px 0 #222,
+    3px -3px 0 #222,
+    -3px 3px 0 #222,
+    3px 3px 0 #222,
+    4px 4px 0 #fff,
+    5px 5px 0 #fff,
+    6px 6px 0 #fff,
+    7px 7px 0 #fff;
+  line-height: 0.8em;
+  letter-spacing: 0.1em;
+  transform: scaleY(0.7);
+  -webkit-transform: scaleY(0.7);
+  -moz-transform: scaleY(0.7);
+  margin:0;
+  text-align: center;
+}
+.script {
+  font-family: "Seaweed Script";
+  color: #fff;
+  text-align: center;
+  font-size: 40px;
+  position: relative;
+  margin:0;
+}
+.script span {
+  background-color: #222;
+  padding: 0 0.3em;
+}
+.script:before {
+  content:"";
+  display: block;
+  position: absolute;
+  z-index:-1;
+  top: 50%;
+  width: 100%;
+  border-bottom: 3px solid #fff;
+}
+.text1 {
+  font-size: 60px;
+}
+.text2 {
+  font-size: 155px;
+  position: relative;
+  
+  opacity: 0; /* 初めは透明に設定 */
+  transform: translateY(100%); /* 下からスライドするために位置を下に設定 */
+  animation: fadeInFromBottom 1s forwards; /* フェードインアニメーションの設定 */
+}
+.text3 {
+  font-size: 100px;
+}
+.head{
+	background-color: rgb(255, 128, 0);
+	padding-bottom: 0.9%;
+	border-radius: 30px;
+	border: solid 2px whitesmoke;
+}
+.h1posi{
+	padding-top: 2%;
+	text-align: center;
+	font-family: sans-serif;
+	color: ghostwhite;
+	
+}
+.fade-in-text {
+  position: relative;
+  font-size: 40px;
+  opacity: 0; /* 初めは透明に設定 */
+  transform: translateY(100%); /* 下からスライドするために位置を下に設定 */
+  animation: fadeInFromBottom 1s forwards; /* フェードインアニメーションの設定 */
+}
+
+@keyframes fadeInFromBottom {
+  to {
+    opacity: 1; /* アニメーション終了時に完全に表示 */
+    transform: translateY(0); /* アニメーション終了時の位置 */
+  }
+}
+.A{
+    display: inline-block;
+   
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.B{
+    background: #ffaf74;
+    height: 100px;
+    display: none;
+}
+.C{
+    display: block;
+}
+
+.edit-back-ground{
+	
+	border: solid;
+}
+.fon{
+	font-size: 95%;
+	font-weight: 900;
+}
+.prettyprint ol.linenums > li {
+	list-style-type: decimal; 
+}
+code{
+	line-height: 1.2;
+	font-family: Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+}
+.in{
+	display: flex;
+}
+.box{
+	border: solid 5px red;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 100px;
+  font-weight: bold;
+  font-size: 60px;
+}
+.resi{
+	resize: both;
+	overflow:auto;
+}
